@@ -1,0 +1,13 @@
+USE [Fornitori]
+-- Create a new table called 'TipiDocumento' in schema 'dbo'
+-- Drop the table if it already exists
+IF OBJECT_ID('dbo.TipiDocumento', 'U') IS NOT NULL
+DROP TABLE dbo.TipiDocumento
+GO
+-- Create the table in the specified schema
+CREATE TABLE dbo.TipiDocumento
+(
+  
+   TipoDocumento     [NVARCHAR](50)  NOT NULL   PRIMARY KEY, -- primary key column,
+);
+GO
