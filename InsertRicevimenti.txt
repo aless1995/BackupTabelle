@@ -1,0 +1,4 @@
+Insert into Ricevimenti (Company, Fornitore, Articolo, DescrizioneArticolo, CodiceFornitore, CodiceArticolo, TimeStampRicevimento) VALUES ('AMER', 'Pippo.srl', '87987', 'Descrizione numero 1', '001', '1000', '01/02/2003')
+
+
+Insert into Ricevimenti (Company, Fornitore, Articolo, DescrizioneArticolo, CodiceFornitore, CodiceArticolo, TimeStampRicevimento) VALUES ('Sir', 'Pippo.srl', '87985', 'Descrizione numero5', '004', '10044', '05/02/2003')

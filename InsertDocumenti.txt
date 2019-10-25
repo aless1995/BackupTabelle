@@ -1,0 +1,1 @@
+Insert into Documenti (TimeStampDocumento, TimestampRicevimento, TipoDocumento, PercorsoDocumentoFilesystem, CodiceFornitore, CodiceArticolo) VALUES ('01/02/2002', '01/02/2003', 'Certificato UL', 'D/CartellaDocumenti/', '001', '1000')
