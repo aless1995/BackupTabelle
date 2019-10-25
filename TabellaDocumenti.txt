@@ -1,0 +1,22 @@
+USE [Fornitori]
+-- Create a new table called 'Documenti' in schema 'dbo'
+-- Drop the table if it already exists
+IF OBJECT_ID('dbo.Documenti', 'U') IS NOT NULL
+DROP TABLE dbo.Documenti
+GO
+-- Create the table in the specified schema
+CREATE TABLE dbo.Documenti
+(
+   TimeStampDocumento   date  NOT NULL,
+   TimeStampRicevimento   date  NOT NULL,    
+   PercorsoDocumento    [NVARCHAR](50)  NOT NULL,
+   TipoDocumento    [NVARCHAR](50)  NOT NULL,
+   PercorsoDocumentoFilesystem    [NVARCHAR](50)  NOT NULL,
+   CodiceFornitore    [NVARCHAR](50)  NOT NULL,
+   CodiceArticolo    [NVARCHAR](50)  NOT NULL,
+   primary key (TipoDocumento, TimeStampDocumento),
+   constraint fk_Documenti_TipiDocumento foreign key (TipoDocumento) references TipiDocumento(TipoDocumento),
+   constraint fk_Documenti_Ricevimenti foreign key (CodiceArticolo, CodiceFornitore, TimeStampRicevimento) references Ricevimenti(CodiceArticolo, CodiceFornitore, TimeStampRicevimento)
+   
+);
+GO

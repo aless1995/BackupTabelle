@@ -1,0 +1,19 @@
+USE [Fornitori]
+-- Create a new table called 'Ricevimenti' in schema 'dbo'
+-- Drop the table if it already exists
+IF OBJECT_ID('dbo.Ricevimenti', 'U') IS NOT NULL
+DROP TABLE dbo.Ricevimenti
+GO
+-- Create the table in the specified schema
+CREATE TABLE dbo.Ricevimenti
+(
+   Company     [NVARCHAR](50)  NOT NULL,
+   Fornitore      [NVARCHAR](50)  NOT NULL,
+   Articolo      [NVARCHAR](50)  NOT NULL,
+   DescrizioneArticolo      [NVARCHAR](50)  NOT NULL,
+   CodiceFornitore [NVARCHAR](50)  NOT NULL,
+   CodiceArticolo [NVARCHAR](50)  NOT NULL,
+   TimeStampRicevimento date  NOT NULL,
+   primary key (CodiceArticolo, CodiceFornitore, TimeStampRicevimento)
+);
+GO
